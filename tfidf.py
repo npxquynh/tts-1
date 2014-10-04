@@ -12,7 +12,6 @@ import doc_handling
 QUERY_FILE  = './qrys.txt'
 DOC_FILE    = './docs.txt'
 TFIDF_FILE  = './tfidf.top'
-K = 2
 
 class Tfidf():
     def __init__(self, query_file, doc_file, k_constant, preprocessing_option = 1):
@@ -169,9 +168,10 @@ class Tfidf():
 if __name__ == '__main__':
     time_1 = time.time()
 
+    K = 2
     # preprocessing
     # = 1: normal case
-    preprocessing_option = 7
+    preprocessing_option = 1
 
     task2 = Tfidf(QUERY_FILE, DOC_FILE, K, preprocessing_option)
     task2.score_query_document()
